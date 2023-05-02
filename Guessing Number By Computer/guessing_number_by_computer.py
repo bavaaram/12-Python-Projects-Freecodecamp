@@ -5,8 +5,8 @@ import random
 
 def guess_by_pc():
     """
-    This function is a game. You Enter a Number and
-    computer must guess it!
+    This function is a game. You Enter a Number betwen
+    1 & 100 and computer must guess it!
     """
     a, b = 1, 100
     while 1:
@@ -33,3 +33,6 @@ def guess_by_pc():
             b = guess - 1
             guess = random.randint(a, b)
     print(f"The Guessed number is {guess}.\n Correct!")
+
+
+guess_by_pc()
