@@ -28,7 +28,7 @@ def hads():
             print("is Low!")
         if guess > random_number:
             print("Higher")
-    print("Correct!")
+    print(f"Correct! The guessed number is {x_1}")
 
 
 hads()
