@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 """
 This Program is for Guessing the number that user entered by computer.
 """
@@ -6,22 +6,14 @@ This Program is for Guessing the number that user entered by computer.
 import random
 
 
-def guess_by_pc():
+def guess_by_pc(x_1):
     """
     This function is a game. You Enter a Number betwen
     1 & 100 and computer must guess it!
     """
-    low, high = 1, 100
-    while 1:
-        try:
-            x_1 = int(input("Please Enter a number between 1 & 100: "))
-        except ValueError:
-            print("Invalid Input.")
-            continue
-        else:
-            break
+    low, high, stat = 1, x_1, ""
     guess = random.randint(low, high)
-    while low != high:
+    while stat != "c":
         while 1:
             print(f"The Guessed number is {guess}. status? l/h/c", end="\t")
             stat = input()
@@ -35,7 +27,7 @@ def guess_by_pc():
         elif stat == "h":
             high = guess - 1
             guess = random.randint(low, high)
-    print(f"Correct! the number is {x_1}")
+    print(f"Correct! the number is {guess}")
 
 
-guess_by_pc()
+guess_by_pc(1000)
