@@ -26,11 +26,9 @@ def hads():
             continue
         if guess < random_number:
             print("is Low!")
-            continue
         if guess > random_number:
             print("Higher")
-            continue
-        print("Correct!")
+    print("Correct!")
 
 
 hads()
