@@ -3,11 +3,20 @@
 import random
 
 
-def hads(x_1: int):
+def hads():
     """
     This Function actually generate a random integer between 1 and x_1
     """
-    random_number = random.randint(1, int(x_1))
+    x_1 = input("Please Enter Range: ")
+    while 1:
+        try:
+            random_number = random.randint(1, int(x_1))
+        except ValueError:
+            print("Invalid Input. ")
+            x_1 = input("Please Enter Range: ")
+            continue
+        else:
+            break
     guess = 0
     while guess != random_number:
         try:
@@ -24,13 +33,4 @@ def hads(x_1: int):
         print("Correct!")
 
 
-while 1:
-    try:
-        ran = input("Please Enter your Range: ")
-    except ValueError:
-        print("Invalid Input. ")
-        continue
-    else:
-        break
-
-print(hads(ran))
+hads()
