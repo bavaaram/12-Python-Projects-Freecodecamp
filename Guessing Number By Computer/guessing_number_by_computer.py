@@ -21,7 +21,7 @@ def guess_by_pc():
         else:
             break
     guess = random.randint(low, high)
-    while 1:
+    while low != high:
         while 1:
             print(f"The Guessed number is {guess}. status? l/h/c", end="\t")
             stat = input()
@@ -35,9 +35,7 @@ def guess_by_pc():
         elif stat == "h":
             high = guess - 1
             guess = random.randint(low, high)
-        else:
-            print(f"Correct! the number is {x_1}")
-            break
+    print(f"Correct! the number is {x_1}")
 
 
 guess_by_pc()
